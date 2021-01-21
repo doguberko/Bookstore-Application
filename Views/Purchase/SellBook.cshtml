@@ -1,0 +1,43 @@
+﻿@model LibrarySystem.Models.ENTITY.PURCHASE
+
+@{
+    ViewBag.Title = "SellBook";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<form class="form-group" method="post">
+    <div>
+
+    </div>
+    <div style="margin-top:15px">
+        <label>Book Name</label>
+        @Html.DropDownListFor(b => b.BOOK.Book_ID, (List<SelectListItem>)ViewBag.book_id, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+        <label>User Name</label>
+        @Html.DropDownListFor(b => b.USERS.User_ID, (List<SelectListItem>)ViewBag.user_id, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+        <label>Purchase Date</label>
+        <input type="text" class="form-control" name="Pr_Date" value="@DateTime.Now.ToShortDateString()" />
+    </div>
+
+    <div style="margin-top:15px">
+        <label>Book Price</label>
+        @Html.TextBoxFor(b => b.Pr_Price, new { @class = "form-control" })
+    </div>
+
+
+
+    <div style="margin-top:15px">
+        <button class="btn btn-info">Add New Purchase</button>
+
+    </div>
+
+
+</form>
+
+

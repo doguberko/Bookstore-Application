@@ -1,0 +1,58 @@
+﻿@model LibrarySystem.Models.ENTITY.BOOK
+
+@{
+    ViewBag.Title = "AddBook";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div>
+
+    </div>
+    <div style="margin-top:15px">
+        <label>Book Name</label>
+        @Html.TextBoxFor(b => b.Book_Name, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+        <label>Book Category</label>
+        @Html.DropDownListFor(b=>b.CATEGORY.Category_ID,(List<SelectListItem>)ViewBag.book_catg, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+        <label>Book Author</label>
+        @Html.DropDownListFor(b => b.AUTHORS.Author_ID, (List<SelectListItem>)ViewBag.book_aut, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+        <label>Book Year</label>
+        @Html.TextBoxFor(b => b.Book_Year, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+        <label>Book Publisher</label>
+        @Html.TextBoxFor(b => b.Book_Publisher, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+        <label>Book Page</label>
+        @Html.TextBoxFor(b => b.Book_Page, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+        <label>Book Price</label>
+        @Html.TextBoxFor(b => b.Book_Price, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+        <label>Book Stocks</label>
+        @Html.TextBoxFor(b => b.Book_Stocks, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info">Add New Author</button>
+
+    </div>
+
+
+</form>

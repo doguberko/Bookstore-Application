@@ -1,0 +1,40 @@
+﻿@model LibrarySystem.Models.ENTITY.ADMIN
+@{
+    ViewBag.Title = "AddAdmin";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<form class="form-group" method="post">
+    <div>
+
+    </div>
+    <div style="margin-top:15px">
+        <label>Admin Name</label>
+        @Html.TextBoxFor(ad => ad.Admin_Name, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+        <label>Admin Lastname</label>
+        @Html.TextBoxFor(ad => ad.Admin_Lastname, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+        <label>Admin E-Mail</label>
+        @Html.TextBoxFor(ad => ad.Admin_Mail, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+        <label>Admin Password</label>
+        @Html.TextBoxFor(ad => ad.Admin_Pass, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info">Add New Admin</button>
+
+    </div>
+
+
+</form>
+
+

@@ -1,0 +1,41 @@
+﻿@model LibrarySystem.Models.ENTITY.AUTHORS
+
+@{
+    ViewBag.Title = "GetAuthor";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("UpdateAuthor", "Author", FormMethod.Post))
+{
+<div style="margin-bottom:15px">
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+            <label>
+                Author ID
+            </label>
+            @Html.TextBoxFor(aut => aut.Author_ID, new { @class = "form-control" })
+        </div>
+    </div>
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+            <label>
+                Author Name
+            </label>
+            @Html.TextBoxFor(aut => aut.Author_Name, new { @class = "form-control" })
+        </div>
+    </div>
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+            <label>
+                Author Last Name
+            </label>
+            @Html.TextBoxFor(aut => aut.Author_Lastname ,new { @class = "form-control" })
+        </div>
+    </div>
+
+    <button class="btn btn-warning">
+        Update Author
+    </button>
+</div>
+ }
+

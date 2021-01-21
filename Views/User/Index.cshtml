@@ -1,0 +1,76 @@
+﻿@using LibrarySystem.Models.ENTITY;
+@model List<USERS>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2></h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>
+            User ID
+        </th>
+        <th>
+            User Name
+        </th>
+        <th>
+            User Lastname
+        </th>
+        <th>
+            User NickName
+        </th>
+        <th>
+            User E-Mail
+        </th>
+        <th>
+            User Password
+        </th>
+        <th>
+            User Phone
+        </th>
+        <th>
+            Delete User
+        </th>
+        <th>
+            Update User
+        </th>
+    </tr>
+
+    @foreach (var aut in Model)
+    {
+        <tr>
+            <td>
+                @aut.User_ID
+            </td>
+            <td>
+                @aut.User_Name
+            </td>
+            <td>
+                @aut.User_Lastname
+            </td>
+            <td>
+                @aut.User_Nickname
+            </td>
+            <td>
+                @aut.User_Mail
+            </td>
+            <td>
+                @aut.User_Password
+            </td>
+            <td>
+                @aut.User_Phone
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "DeleteUser", new { id = aut.User_ID }, new { @class = "btn btn-danger", onclick = "return confirm('Do you want to delete?')" })
+            </td>
+            <td>
+                <a href="/User/GetUser/@aut.User_ID" class="btn btn-primary">Update</a>
+            </td>
+        </tr>
+    }
+
+</table>
+
+<a class="btn btn-primary" href="/User/AddUser">Add New User</a>

@@ -1,0 +1,71 @@
+﻿@using LibrarySystem.Models.ENTITY;
+@model List<ADMIN>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>ADMINS</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>
+            Admin ID
+        </th>
+        <th>
+            Admin Name
+        </th>
+        <th>
+            Admin Last Name
+        </th>
+        <th>
+            Admin E-Mail
+        </th>
+        <th>
+            Admin Password
+        </th>
+        <th>
+            Delete
+        </th>
+        <th>
+            Update
+        </th>
+
+    </tr>
+
+    @foreach (var admn in Model)
+    {
+    <tr>
+        <td>
+            @admn.Admin_ID
+        </td>
+        <td>
+            @admn.Admin_Name
+        </td>
+        <td>
+            @admn.Admin_Lastname
+        </td>
+        <td>
+            @admn.Admin_Mail
+        </td>
+        <td>
+            @admn.Admin_Pass
+        </td>
+        <td>
+            <a href="/Admin/DeleteAdmin/@admn.Admin_ID" class="btn btn-danger">Delete</a>
+        </td>
+        <td>
+            <a href="/Admin/GetAdmin/@admn.Admin_ID" class="btn btn-success">Update</a>
+        </td>
+    </tr>
+        
+
+        
+
+    }
+
+
+
+</table>
+
+<a href="/Admin/AddAdmin" class="btn btn-primary">Add New Admin</a>

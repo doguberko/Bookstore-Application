@@ -1,0 +1,80 @@
+﻿@model LibrarySystem.Models.ENTITY.BOOK
+@{
+    ViewBag.Title = "GetBook";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("UpdateBook", "Book", FormMethod.Post))
+{
+<div style="margin-bottom:15px">
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+            <label>
+                Book ID
+            </label>
+            @Html.TextBoxFor(bk => bk.Book_ID, new { @class = "form-control" })
+        </div>
+    </div>
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+            <label>
+                Book Name
+            </label>
+            @Html.TextBoxFor(bk => bk.Book_Name, new { @class = "form-control" })
+        </div>
+    </div>
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+            <label>
+                Category
+            </label>
+            @Html.DropDownListFor(b => b.CATEGORY.Category_ID, (List<SelectListItem>)ViewBag.book_catg, new { @class = "form-control" })
+        </div>
+    </div>
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+            <label>
+                Author
+            </label>
+            @Html.DropDownListFor(b => b.AUTHORS.Author_ID, (List<SelectListItem>)ViewBag.book_aut, new { @class = "form-control" })
+        </div>
+    </div>
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+            <label>
+                Book Year
+            </label>
+            @Html.TextBoxFor(bk => bk.Book_Year, new { @class = "form-control" })
+        </div>
+    </div>
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+            <label>
+                Publisher
+            </label>
+            @Html.TextBoxFor(bk => bk.Book_Publisher, new { @class = "form-control" })
+        </div>
+    </div>
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+            <label>
+                Book Page
+            </label>
+            @Html.TextBoxFor(bk => bk.Book_Page, new { @class = "form-control" })
+        </div>
+    </div>
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+            <label>
+                PRICE
+            </label>
+            @Html.TextBoxFor(bk => bk.Book_Price, new { @class = "form-control" })
+        </div>
+    </div>
+
+
+    <button class="btn btn-warning">
+        Update Book
+    </button>
+</div>
+}

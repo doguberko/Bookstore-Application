@@ -1,0 +1,23 @@
+﻿@model LibrarySystem.Models.ENTITY.CATEGORY
+@{
+    ViewBag.Title = "AddCategory";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div>
+
+    </div>
+    <div style="margin-top:15px">
+        <label>Category Name</label>
+        @Html.TextBoxFor(ad => ad.Category_Name, new { @class = "form-control" })
+
+    </div>
+
+    <div style="margin-top:15px">
+        <button class="btn btn-info">Add New Admin</button>
+
+    </div>
+
+
+</form>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="59e9b749ecfb4c42a7ec9b974ab75107" Name="Diagram1">
+        <EntityTypeShape EntityType="LibraryManagementSystemModel.ADMIN" Width="1.5" PointX="6" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryManagementSystemModel.AUTHORS" Width="1.5" PointX="0.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryManagementSystemModel.BOOK" Width="1.5" PointX="3.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryManagementSystemModel.CATEGORY" Width="1.5" PointX="1.375" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryManagementSystemModel.PURCHASE" Width="1.5" PointX="6.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryManagementSystemModel.sysdiagrams" Width="1.5" PointX="10" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryManagementSystemModel.USERS" Width="1.5" PointX="8.5" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="LibraryManagementSystemModel.FK_BOOK_AUTHORS" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryManagementSystemModel.FK_BOOK_CATEGORY" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryManagementSystemModel.FK_PURCHASE_BOOK" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryManagementSystemModel.FK_PURCHASE_USERS" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

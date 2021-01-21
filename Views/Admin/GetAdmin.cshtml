@@ -1,0 +1,56 @@
+﻿@model LibrarySystem.Models.ENTITY.ADMIN
+@{
+    ViewBag.Title = "GetAdmin";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("UpdateAdmin", "Admin", FormMethod.Post))
+{
+<div style="margin-bottom:15px">
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+
+            <label>
+                Admin ID
+            </label>
+            @Html.TextBoxFor(ad => ad.Admin_ID, new { @class = "form-control" })
+        </div>
+    </div>
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+            <label>
+                Admin Name
+            </label>
+            @Html.TextBoxFor(ad => ad.Admin_Name, new { @class = "form-control" })
+        </div>
+    </div>
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+            <label>
+                Admin Last Name
+            </label>
+            @Html.TextBoxFor(ad => ad.Admin_Lastname, new { @class = "form-control" })
+        </div>
+    </div>
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+            <label>
+                Admin E-Mail
+            </label>
+            @Html.TextBoxFor(ad => ad.Admin_Mail, new { @class = "form-control" })
+        </div>
+    </div>
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+            <label>
+                Admin Password
+            </label>
+            @Html.TextBoxFor(ad => ad.Admin_Pass, new { @class = "form-control" })
+        </div>
+    </div>
+    <button class="btn btn-warning">
+        Update Admin
+    </button>
+</div>
+}

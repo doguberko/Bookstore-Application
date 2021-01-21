@@ -1,0 +1,46 @@
+﻿@model LibrarySystem.Models.ENTITY.USERS
+@{
+    ViewBag.Title = "AddUser";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div>
+
+    </div>
+    <div style="margin-top:15px">
+        <label>User Name</label>
+        @Html.TextBoxFor(b => b.User_Name, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+        <label>User Lastname</label>
+        @Html.TextBoxFor(b => b.User_Lastname, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <label>User Nickname</label>
+        @Html.TextBoxFor(b => b.User_Nickname, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <label>User E-mail</label>
+        @Html.TextBoxFor(b => b.User_Mail, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+        <label>User Password</label>
+        @Html.TextBoxFor(b => b.User_Password, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+        <label>User Phone</label>
+        @Html.TextBoxFor(b => b.User_Phone, new { @class = "form-control" })
+
+    </div>
+    
+    <div style="margin-top:15px">
+        <button class="btn btn-info">Add New User</button>
+
+    </div>
+
+
+</form>

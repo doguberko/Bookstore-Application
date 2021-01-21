@@ -1,0 +1,56 @@
+﻿@using LibrarySystem.Models.ENTITY;
+@model List<PURCHASE>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Shopping Log</h2>
+
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>
+            Purchase ID
+        </th>
+        <th>
+            Book ID
+        </th>
+        <th>
+            User ID
+        </th>
+        <th>
+            Purchase Date
+        </th>
+        <th>
+            Delete Log
+        </th>
+        
+    </tr>
+
+    @foreach (var aut in Model)
+    {
+        <tr>
+            <td>
+                @aut.Pr_ID 
+            </td>
+            <td>
+                @aut.Pr_Book
+            </td>
+            <td>
+                @aut.Pr_User
+            </td>
+            <td>
+                @aut.Pr_Date
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "DeletePurchase", new { id = aut.Pr_ID }, new { @class = "btn btn-danger", onclick = "return confirm('Do you want to delete?')" })
+            </td>
+            
+        </tr>
+    }
+
+</table>
+
+ <a class="btn btn-primary" href="/Purchase/SellBook">Add New Purchase</a> 

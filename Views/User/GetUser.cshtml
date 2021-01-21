@@ -1,0 +1,72 @@
+﻿@model LibrarySystem.Models.ENTITY.USERS
+@{
+    ViewBag.Title = "GetUser";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("UpdateUser", "User", FormMethod.Post))
+{
+<div style="margin-bottom:15px">
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+            <label>
+                User ID
+            </label>
+            @Html.TextBoxFor(aut => aut.User_ID, new { @class = "form-control" })
+        </div>
+    </div>
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+            <label>
+                User Name
+            </label>
+            @Html.TextBoxFor(aut => aut.User_Name, new { @class = "form-control" })
+        </div>
+    </div>
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+            <label>
+                User Last Name
+            </label>
+            @Html.TextBoxFor(aut => aut.User_Lastname, new { @class = "form-control" })
+        </div>
+    </div>
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+            <label>
+                User Nickname
+            </label>
+            @Html.TextBoxFor(aut => aut.User_Nickname, new { @class = "form-control" })
+        </div>
+    </div>
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+            <label>
+                User Mail
+            </label>
+            @Html.TextBoxFor(aut => aut.User_Mail, new { @class = "form-control" })
+        </div>
+    </div>
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+            <label>
+                User Password
+            </label>
+            @Html.TextBoxFor(aut => aut.User_Password, new { @class = "form-control" })
+        </div>
+    </div>
+    <div style="margin-bottom:15px">
+        <div class="form-group">
+            <label>
+                User Mail
+            </label>
+            @Html.TextBoxFor(aut => aut.User_Phone, new { @class = "form-control" })
+        </div>
+    </div>
+    <button class="btn btn-warning">
+        Update User
+    </button>
+</div>
+}
+
